@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.什么是Redis？ | 慢下来~享受当下~</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="网站关键词">
+    <meta name="author" content="zch1337">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.dd397728.js" as="script"><link rel="preload" href="/assets/js/2.6430ac10.js" as="script"><link rel="preload" href="/assets/js/18.e19d705d.js" as="script"><link rel="prefetch" href="/assets/js/10.de11ce4e.js"><link rel="prefetch" href="/assets/js/11.eb24f3d9.js"><link rel="prefetch" href="/assets/js/12.58efe507.js"><link rel="prefetch" href="/assets/js/13.3d3cb395.js"><link rel="prefetch" href="/assets/js/14.163292db.js"><link rel="prefetch" href="/assets/js/15.0eeb79e2.js"><link rel="prefetch" href="/assets/js/16.0fd3ccda.js"><link rel="prefetch" href="/assets/js/17.a13c3e02.js"><link rel="prefetch" href="/assets/js/19.52c11801.js"><link rel="prefetch" href="/assets/js/20.4cfdf5ad.js"><link rel="prefetch" href="/assets/js/21.b6ab34b9.js"><link rel="prefetch" href="/assets/js/22.d6b62e7e.js"><link rel="prefetch" href="/assets/js/23.5bfd3dd2.js"><link rel="prefetch" href="/assets/js/24.8f60b85b.js"><link rel="prefetch" href="/assets/js/25.23e92ce8.js"><link rel="prefetch" href="/assets/js/26.079d4c49.js"><link rel="prefetch" href="/assets/js/27.2a42a3bc.js"><link rel="prefetch" href="/assets/js/28.96e30dd4.js"><link rel="prefetch" href="/assets/js/29.92dc21e8.js"><link rel="prefetch" href="/assets/js/3.7ceae309.js"><link rel="prefetch" href="/assets/js/30.a44ddd87.js"><link rel="prefetch" href="/assets/js/31.ebffffad.js"><link rel="prefetch" href="/assets/js/32.cbeff704.js"><link rel="prefetch" href="/assets/js/33.f34223b0.js"><link rel="prefetch" href="/assets/js/4.3357b40a.js"><link rel="prefetch" href="/assets/js/5.1d0c2d3a.js"><link rel="prefetch" href="/assets/js/6.aeb7dc84.js"><link rel="prefetch" href="/assets/js/7.f2b24add.js"><link rel="prefetch" href="/assets/js/8.b624c3e8.js"><link rel="prefetch" href="/assets/js/9.4891ca45.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/hero.png" alt="慢下来~享受当下~" class="logo"> <span class="site-name can-hide">慢下来~享受当下~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="英语" class="dropdown-title"><span class="title">英语</span> <span class="arrow down"></span></button> <button type="button" aria-label="英语" class="mobile-dropdown-title"><span class="title">英语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yingyu/fangfa.html" class="nav-link">
+  方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/sanjianke.html" class="nav-link">
+  三剑客
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/vue.html" class="nav-link">
+  vue全家桶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          第一阶段-基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/javase.html" class="nav-link">
+  javase
+</a></li><li class="dropdown-subitem"><a href="/houduan/mysql.html" class="nav-link">
+  mysql
+</a></li><li class="dropdown-subitem"><a href="/houduan/jdbc.html" class="nav-link">
+  jdbc
+</a></li><li class="dropdown-subitem"><a href="/houduan/servlet.html" class="nav-link">
+  servlet
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第二阶段-框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/maven.html" class="nav-link">
+  maven
+</a></li><li class="dropdown-subitem"><a href="/houduan/spring.html" class="nav-link">
+  spring
+</a></li><li class="dropdown-subitem"><a href="/houduan/springMVC.html" class="nav-link">
+  springMVC
+</a></li><li class="dropdown-subitem"><a href="/houduan/mybatis+PLUS.html" class="nav-link">
+  mybatis+PLUS
+</a></li><li class="dropdown-subitem"><a href="/houduan/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-subitem"><a href="/houduan/redis.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/houduan/springsecurity.html" class="nav-link">
+  springsecurity
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第三阶段-微服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/springcloud.html" class="nav-link">
+  springcloud
+</a></li><li class="dropdown-subitem"><a href="/houduan/springcloudAlibaba.html" class="nav-link">
+  springcloudAlibaba
+</a></li><li class="dropdown-subitem"><a href="/houduan/rabbitMQ.html" class="nav-link">
+  rabbitMQ
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/linux.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/nginx.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/docker.html" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高效工具" class="dropdown-title"><span class="title">高效工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="高效工具" class="mobile-dropdown-title"><span class="title">高效工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/gaoxiao/vim.html" class="nav-link">
+  vim
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目总结" class="dropdown-title"><span class="title">项目总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目总结" class="mobile-dropdown-title"><span class="title">项目总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/prosummary/vueS.html" class="nav-link">
+  vue项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/javaS.html" class="nav-link">
+  java项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/前后端项目开发流程.html" class="nav-link">
+  前后端项目搭建
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/后端知识总结.html" class="nav-link">
+  后端开发流程
+</a></li></ul></div></div><div class="nav-item"><a href="http://www.zch1337.xyz/#/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于我
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="英语" class="dropdown-title"><span class="title">英语</span> <span class="arrow down"></span></button> <button type="button" aria-label="英语" class="mobile-dropdown-title"><span class="title">英语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yingyu/fangfa.html" class="nav-link">
+  方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/sanjianke.html" class="nav-link">
+  三剑客
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/vue.html" class="nav-link">
+  vue全家桶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          第一阶段-基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/javase.html" class="nav-link">
+  javase
+</a></li><li class="dropdown-subitem"><a href="/houduan/mysql.html" class="nav-link">
+  mysql
+</a></li><li class="dropdown-subitem"><a href="/houduan/jdbc.html" class="nav-link">
+  jdbc
+</a></li><li class="dropdown-subitem"><a href="/houduan/servlet.html" class="nav-link">
+  servlet
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第二阶段-框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/maven.html" class="nav-link">
+  maven
+</a></li><li class="dropdown-subitem"><a href="/houduan/spring.html" class="nav-link">
+  spring
+</a></li><li class="dropdown-subitem"><a href="/houduan/springMVC.html" class="nav-link">
+  springMVC
+</a></li><li class="dropdown-subitem"><a href="/houduan/mybatis+PLUS.html" class="nav-link">
+  mybatis+PLUS
+</a></li><li class="dropdown-subitem"><a href="/houduan/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-subitem"><a href="/houduan/redis.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/houduan/springsecurity.html" class="nav-link">
+  springsecurity
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第三阶段-微服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/springcloud.html" class="nav-link">
+  springcloud
+</a></li><li class="dropdown-subitem"><a href="/houduan/springcloudAlibaba.html" class="nav-link">
+  springcloudAlibaba
+</a></li><li class="dropdown-subitem"><a href="/houduan/rabbitMQ.html" class="nav-link">
+  rabbitMQ
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/linux.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/nginx.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/docker.html" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高效工具" class="dropdown-title"><span class="title">高效工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="高效工具" class="mobile-dropdown-title"><span class="title">高效工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/gaoxiao/vim.html" class="nav-link">
+  vim
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目总结" class="dropdown-title"><span class="title">项目总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目总结" class="mobile-dropdown-title"><span class="title">项目总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/prosummary/vueS.html" class="nav-link">
+  vue项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/javaS.html" class="nav-link">
+  java项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/前后端项目开发流程.html" class="nav-link">
+  前后端项目搭建
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/后端知识总结.html" class="nav-link">
+  后端开发流程
+</a></li></ul></div></div><div class="nav-item"><a href="http://www.zch1337.xyz/#/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于我
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>1.什么是Redis？</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/houduan/redis.html#string" class="sidebar-link">string</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#list" class="sidebar-link">list</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#set" class="sidebar-link">set</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#hash" class="sidebar-link">hash</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#zset" class="sidebar-link">zset</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#key-对key的操作" class="sidebar-link">key 对key的操作</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#bitmaps" class="sidebar-link">bitmaps</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#hyperloglog" class="sidebar-link">HyperLogLog</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#_1-数据删除策略" class="sidebar-link">1.数据删除策略</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/houduan/redis.html#_2-数据淘汰策略" class="sidebar-link">2.数据淘汰策略</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_1-什么是redis"><a href="#_1-什么是redis" class="header-anchor">#</a> 1.什么是Redis？</h1> <p>非关系数据库，key-value模式存数据。</p> <h1 id="_2-适用场景"><a href="#_2-适用场景" class="header-anchor">#</a> 2.适用场景</h1> <p>1.取最新的数据</p> <p>2.热搜</p> <p>3.登录信息过期</p> <p>4.分布式下新增id，全局唯一</p> <p>redis 单线程</p> <p>5.网站的用户分布在哪几个省 set排重</p> <h1 id="_3-特点"><a href="#_3-特点" class="header-anchor">#</a> 3.特点</h1> <p>1.高效</p> <p>因为放到内存</p> <p>2.原子性</p> <p>主逻辑线程是单线程</p> <p>3.支持多种数据结构</p> <p>string</p> <p>list    a--&gt; [&quot;hello&quot;, &quot;2&quot;]  消息队列</p> <p>hash  就是map 购物车</p> <p>set     去重</p> <p>zset    热搜 排行榜</p> <p>4.稳定性 定期将数据存到硬盘（持久化）</p> <p>5.其他：支持过期时间（登录状态过期），支持事务，消息订阅</p> <h1 id="_4-使用"><a href="#_4-使用" class="header-anchor">#</a> 4.使用</h1> <p>启动服务端</p> <div class="language- extra-class"><pre class="language-text"><code>1.启动：cmd redis-server.exe redis.windows.conf
+2.默认端口：6379
+打开
+	cd /export/server/redis-6.2.6/  
+	bin/redis-server redis.conf  
+关闭
+	cd /export/server/redis-6.2.6/ 
+ 	bin/redis-cli  -h 192.168.157.132 shutdown  
+</code></pre></div><p>连接客户端</p> <div class="language- extra-class"><pre class="language-text"><code>启动：cmd redis-cli.exe -h localhost -p 6379 
+</code></pre></div><p>连接redis客户端</p> <div class="language- extra-class"><pre class="language-text"><code>cd  /export/server/redis-6.2.6/  
+bin/redis-cli -h 192.168.157.132 -p 6379
+</code></pre></div><p>linux中配置的</p> <div class="language- extra-class"><pre class="language-text"><code>192.168.157.132
+</code></pre></div><h1 id="_5-数据类型"><a href="#_5-数据类型" class="header-anchor">#</a> 5.数据类型</h1> <h2 id="string"><a href="#string" class="header-anchor">#</a> string</h2> <div class="language-redis extra-class"><pre class="language-text"><code>1.设值 取值
+set key value
+get key
+2.批量
+mset mget 操作多组数据
+mset key1 value1 key2 value2
+mget key1 key2
+3.查询所有的key值
+keys * 
+4.当key不存在时设置值
+setnx key value、
+5.增1减1
+将key的value值加1
+incr id
+decr id
+</code></pre></div><h2 id="list"><a href="#list" class="header-anchor">#</a> list</h2> <div class="language- extra-class"><pre class="language-text"><code>1.设置值 插入头部  注意左边是头部 0 1 2 3 4
+lpush list1 1 2 3 zc 插到头部
+rpush list2 1 插到尾部
+2.查看数据
+lrange list1 0 -1 全看
+lrange list1 start end
+3.根据索引获取value
+lindex list2 1
+4.删除数据
+lpop list2
+rpop list2
+
+</code></pre></div><h2 id="set"><a href="#set" class="header-anchor">#</a> set</h2> <div class="language- extra-class"><pre class="language-text"><code>1.添加数据
+sadd set1 1 2 3
+2.获取数据
+smembers set1
+3.获取长度
+scard set1
+4.常见的业务
+统计当天登录用户数
+sadd uv:today 001 002
+scard set1
+</code></pre></div><h2 id="hash"><a href="#hash" class="header-anchor">#</a> hash</h2> <div class="language- extra-class"><pre class="language-text"><code>hash适合存储对象
+1.设置值 获取值
+hset user name zch
+hset user age 20
+hget user name
+2.批量
+hmset user name zch age 11
+hmget user name age 
+3.获取所有的key
+hkeys user
+4.获取所有的值
+hvals user
+5.增1减1
+hincrby user age 1
+1可以为 2 或者 -1
+</code></pre></div><h2 id="zset"><a href="#zset" class="header-anchor">#</a> zset</h2> <div class="language- extra-class"><pre class="language-text"><code>有序的集合 根据设置的权重来排序 应用：排行榜
+1.添加
+zadd pv 100 page1.html 200 page2.html
+2.查看权重
+zscore pv page1.html
+3.获取有序集合的成员数
+zcard pv
+4.查询权重范围的数量
+zcount pv min max
+5.增加权重
+zincrby pv 1 page1.html
+6.并集
+zinterstore pv_result pv pv1 放到pv_result里面
+7.查看列表 默认权重低到高 
+zrange pv 0 -1
+8.查看列表 高到低
+zrevrange pv 0 -1
+
+</code></pre></div><h2 id="key-对key的操作"><a href="#key-对key的操作" class="header-anchor">#</a> key 对key的操作</h2> <p>​</p> <div class="language- extra-class"><pre class="language-text"><code>1.查询所有的key
+keys * 
+注意代码里面不要用，通select * from table 一样
+2.删除
+del testname
+3.检查是否存在key
+existe testname
+4.给key设置过期时间 单位是s
+expire testname 4	4s后过期
+5.查看还有多久过期
+pttl testname
+6.从当前数据库中随机放回一个key
+randomkey
+7.返回key的value值类型
+type testname
+</code></pre></div><h2 id="bitmaps"><a href="#bitmaps" class="header-anchor">#</a> bitmaps</h2> <div class="language- extra-class"><pre class="language-text"><code>在string中拓展而来的
+业务：记录用户今天是否登录网站
+1.设置值
+setbit dengluuser 0 1 第0号用户登录了
+2.获取值
+getbit dengluuser 0 
+3.获取指定范围内值为1的个数
+bitcount dengluuser start end
+4.求交集、并集
+https://www.ydlclass.com/doc21xnv/frame/redis/
+</code></pre></div><h2 id="hyperloglog"><a href="#hyperloglog" class="header-anchor">#</a> HyperLogLog</h2> <h1 id="_6-java操作redis"><a href="#_6-java操作redis" class="header-anchor">#</a> 6.java操作redis</h1> <h1 id="_7-redis事务"><a href="#_7-redis事务" class="header-anchor">#</a> 7.redis事务</h1> <div class="language- extra-class"><pre class="language-text"><code>multi、exec、discard、watch、unwatch
+关键点：
+1.语法错误，语法错误说明在命令入队前就进行检测的，直接没运行，保持原值
+2.类型错误（运行时错误）运行错误，跳过错误命令继续执行。
+3.为什么Redis不支持事务回滚？
+  提升性能
+</code></pre></div><h1 id="_8-高级操作"><a href="#_8-高级操作" class="header-anchor">#</a> 8.高级操作</h1> <h2 id="_1-数据删除策略"><a href="#_1-数据删除策略" class="header-anchor">#</a> 1.数据删除策略</h2> <div class="language- extra-class"><pre class="language-text"><code>数据存放在内存，内存中的数据可以通过TTL指令获取其状态
+ttl返回值：正数，-1：,-2
+正数：还能存活的时间
+-1：永久有效
+-2：已经过期的数据 或被删除的数据 或 未定义的数据
+定时删除:过期就删除
+惰性删除:到达过期时间，不做处理
+		下次访问该数据 : 
+		1.如果未过期，返回数据
+		2.发现已过期，删除，返回不存在
+定期删除:周期性抽查存储空间（随机抽查，重点抽查）
+</code></pre></div><h2 id="_2-数据淘汰策略"><a href="#_2-数据淘汰策略" class="header-anchor">#</a> 2.数据淘汰策略</h2> <div class="language- extra-class"><pre class="language-text"><code>内存不足了，redis要临时删除一些数据
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.dd397728.js" defer></script><script src="/assets/js/2.6430ac10.js" defer></script><script src="/assets/js/18.e19d705d.js" defer></script>
+  </body>
+</html>

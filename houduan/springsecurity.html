@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.添加依赖和配置 | 慢下来~享受当下~</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="网站关键词">
+    <meta name="author" content="zch1337">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.dd397728.js" as="script"><link rel="preload" href="/assets/js/2.6430ac10.js" as="script"><link rel="preload" href="/assets/js/24.8f60b85b.js" as="script"><link rel="prefetch" href="/assets/js/10.de11ce4e.js"><link rel="prefetch" href="/assets/js/11.eb24f3d9.js"><link rel="prefetch" href="/assets/js/12.58efe507.js"><link rel="prefetch" href="/assets/js/13.3d3cb395.js"><link rel="prefetch" href="/assets/js/14.163292db.js"><link rel="prefetch" href="/assets/js/15.0eeb79e2.js"><link rel="prefetch" href="/assets/js/16.0fd3ccda.js"><link rel="prefetch" href="/assets/js/17.a13c3e02.js"><link rel="prefetch" href="/assets/js/18.e19d705d.js"><link rel="prefetch" href="/assets/js/19.52c11801.js"><link rel="prefetch" href="/assets/js/20.4cfdf5ad.js"><link rel="prefetch" href="/assets/js/21.b6ab34b9.js"><link rel="prefetch" href="/assets/js/22.d6b62e7e.js"><link rel="prefetch" href="/assets/js/23.5bfd3dd2.js"><link rel="prefetch" href="/assets/js/25.23e92ce8.js"><link rel="prefetch" href="/assets/js/26.079d4c49.js"><link rel="prefetch" href="/assets/js/27.2a42a3bc.js"><link rel="prefetch" href="/assets/js/28.96e30dd4.js"><link rel="prefetch" href="/assets/js/29.92dc21e8.js"><link rel="prefetch" href="/assets/js/3.7ceae309.js"><link rel="prefetch" href="/assets/js/30.a44ddd87.js"><link rel="prefetch" href="/assets/js/31.ebffffad.js"><link rel="prefetch" href="/assets/js/32.cbeff704.js"><link rel="prefetch" href="/assets/js/33.f34223b0.js"><link rel="prefetch" href="/assets/js/4.3357b40a.js"><link rel="prefetch" href="/assets/js/5.1d0c2d3a.js"><link rel="prefetch" href="/assets/js/6.aeb7dc84.js"><link rel="prefetch" href="/assets/js/7.f2b24add.js"><link rel="prefetch" href="/assets/js/8.b624c3e8.js"><link rel="prefetch" href="/assets/js/9.4891ca45.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/hero.png" alt="慢下来~享受当下~" class="logo"> <span class="site-name can-hide">慢下来~享受当下~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="英语" class="dropdown-title"><span class="title">英语</span> <span class="arrow down"></span></button> <button type="button" aria-label="英语" class="mobile-dropdown-title"><span class="title">英语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yingyu/fangfa.html" class="nav-link">
+  方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/sanjianke.html" class="nav-link">
+  三剑客
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/vue.html" class="nav-link">
+  vue全家桶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          第一阶段-基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/javase.html" class="nav-link">
+  javase
+</a></li><li class="dropdown-subitem"><a href="/houduan/mysql.html" class="nav-link">
+  mysql
+</a></li><li class="dropdown-subitem"><a href="/houduan/jdbc.html" class="nav-link">
+  jdbc
+</a></li><li class="dropdown-subitem"><a href="/houduan/servlet.html" class="nav-link">
+  servlet
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第二阶段-框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/maven.html" class="nav-link">
+  maven
+</a></li><li class="dropdown-subitem"><a href="/houduan/spring.html" class="nav-link">
+  spring
+</a></li><li class="dropdown-subitem"><a href="/houduan/springMVC.html" class="nav-link">
+  springMVC
+</a></li><li class="dropdown-subitem"><a href="/houduan/mybatis+PLUS.html" class="nav-link">
+  mybatis+PLUS
+</a></li><li class="dropdown-subitem"><a href="/houduan/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-subitem"><a href="/houduan/redis.html" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/houduan/springsecurity.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  springsecurity
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第三阶段-微服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/springcloud.html" class="nav-link">
+  springcloud
+</a></li><li class="dropdown-subitem"><a href="/houduan/springcloudAlibaba.html" class="nav-link">
+  springcloudAlibaba
+</a></li><li class="dropdown-subitem"><a href="/houduan/rabbitMQ.html" class="nav-link">
+  rabbitMQ
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/linux.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/nginx.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/docker.html" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高效工具" class="dropdown-title"><span class="title">高效工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="高效工具" class="mobile-dropdown-title"><span class="title">高效工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/gaoxiao/vim.html" class="nav-link">
+  vim
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目总结" class="dropdown-title"><span class="title">项目总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目总结" class="mobile-dropdown-title"><span class="title">项目总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/prosummary/vueS.html" class="nav-link">
+  vue项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/javaS.html" class="nav-link">
+  java项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/前后端项目开发流程.html" class="nav-link">
+  前后端项目搭建
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/后端知识总结.html" class="nav-link">
+  后端开发流程
+</a></li></ul></div></div><div class="nav-item"><a href="http://www.zch1337.xyz/#/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于我
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="英语" class="dropdown-title"><span class="title">英语</span> <span class="arrow down"></span></button> <button type="button" aria-label="英语" class="mobile-dropdown-title"><span class="title">英语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yingyu/fangfa.html" class="nav-link">
+  方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/sanjianke.html" class="nav-link">
+  三剑客
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/vue.html" class="nav-link">
+  vue全家桶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          第一阶段-基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/javase.html" class="nav-link">
+  javase
+</a></li><li class="dropdown-subitem"><a href="/houduan/mysql.html" class="nav-link">
+  mysql
+</a></li><li class="dropdown-subitem"><a href="/houduan/jdbc.html" class="nav-link">
+  jdbc
+</a></li><li class="dropdown-subitem"><a href="/houduan/servlet.html" class="nav-link">
+  servlet
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第二阶段-框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/maven.html" class="nav-link">
+  maven
+</a></li><li class="dropdown-subitem"><a href="/houduan/spring.html" class="nav-link">
+  spring
+</a></li><li class="dropdown-subitem"><a href="/houduan/springMVC.html" class="nav-link">
+  springMVC
+</a></li><li class="dropdown-subitem"><a href="/houduan/mybatis+PLUS.html" class="nav-link">
+  mybatis+PLUS
+</a></li><li class="dropdown-subitem"><a href="/houduan/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-subitem"><a href="/houduan/redis.html" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/houduan/springsecurity.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  springsecurity
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第三阶段-微服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/springcloud.html" class="nav-link">
+  springcloud
+</a></li><li class="dropdown-subitem"><a href="/houduan/springcloudAlibaba.html" class="nav-link">
+  springcloudAlibaba
+</a></li><li class="dropdown-subitem"><a href="/houduan/rabbitMQ.html" class="nav-link">
+  rabbitMQ
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/linux.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/nginx.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/docker.html" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高效工具" class="dropdown-title"><span class="title">高效工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="高效工具" class="mobile-dropdown-title"><span class="title">高效工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/gaoxiao/vim.html" class="nav-link">
+  vim
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目总结" class="dropdown-title"><span class="title">项目总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目总结" class="mobile-dropdown-title"><span class="title">项目总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/prosummary/vueS.html" class="nav-link">
+  vue项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/javaS.html" class="nav-link">
+  java项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/前后端项目开发流程.html" class="nav-link">
+  前后端项目搭建
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/后端知识总结.html" class="nav-link">
+  后端开发流程
+</a></li></ul></div></div><div class="nav-item"><a href="http://www.zch1337.xyz/#/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于我
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>1.添加依赖和配置</span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_1-添加依赖和配置"><a href="#_1-添加依赖和配置" class="header-anchor">#</a> 1.添加依赖和配置</h1> <div class="language- extra-class"><pre class="language-text"><code>        &lt;!--SpringSecurity启动器--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--redis依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--fastjson依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+            &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--jwt依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
+            &lt;artifactId&gt;jjwt&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--mybatisPlus依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--mysql数据库驱动--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>spring:
+  datasource:
+    url: jdbc:mysql://124.222.237.176:3306/zch_blog?characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+  redis:
+    host: 124.222.237.176
+    port: 6379
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+</code></pre></div><h1 id="_2-自定义userdetailsserviceimpl-待完善"><a href="#_2-自定义userdetailsserviceimpl-待完善" class="header-anchor">#</a> 2.自定义UserDetailsServiceImpl -- 待完善</h1> <p>实现UserDetailsService</p> <p>步骤：</p> <ol><li>根据username去查数据库</li> <li>判断是否查到用户</li> <li>查询权限信息</li> <li>返回用户信息 需要写一个类LoginUser</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
+    @Autowired
+    private UserMapper userMapper;
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        // 根据username去查数据库
+        LambdaQueryWrapper&lt;User&gt; queryWrapper = new LambdaQueryWrapper&lt;&gt;();
+        queryWrapper.eq(User::getUserName, username);
+        User user = userMapper.selectOne(queryWrapper);
+        // 判断是否查到用户 没查到抛出异常
+        if (Objects.isNull(user)) {
+            throw new RuntimeException(&quot;用户不存在&quot;);
+        }
+        // 查询权限信息
+        // TODO 查询权限信息
+        // 这里 后台用户才需要 权限封装
+        if (user.getType().equals(SystemConstants.ADMIN)) {
+            List&lt;String&gt; perms = menuService.selectPermsByUserId(user.getId());
+            return new LoginUser(user, perms);
+        }      
+        // 返回用户信息
+        return new LoginUser(user);
+    }
+}
+</code></pre></div><p>LoginUser</p> <div class="language- extra-class"><pre class="language-text"><code>import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoginUser implements UserDetails {
+
+    private User user;
+    // 这里采用自定义权限校验方法
+    private List&lt;String&gt; authorityList;
+
+    @Override
+    public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
+        return null;
+    }
+
+    @Override
+    public String getPassword() {
+        return user.getPassword();
+    }
+
+    @Override
+    public String getUsername() {
+        return user.getUserName();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}
+</code></pre></div><h1 id="_3-写登录接口和service"><a href="#_3-写登录接口和service" class="header-anchor">#</a> 3.写登录接口和service</h1> <p>在实现类中</p> <p>步骤：</p> <ol><li>调用security验证</li> <li>判断是否认证通过</li> <li>根据userId生成token</li> <li>用户信息存入redis</li> <li>把token和userInfo封装并返回</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Api(tags = &quot;博客登录&quot;)
+@RestController
+public class BlogLoginController {
+    @Autowired
+    private BlogLoginService blogLoginService;
+    @ApiOperation(value = &quot;登录接口&quot;)
+    @PostMapping(&quot;/login&quot;)
+    public R login(@RequestBody User user) {
+        if (!StringUtils.hasText(user.getUserName())) {
+            // 提示 必须要传用户名
+            throw new SystemException(AppHttpCodeEnum.REQUIRE_USERNAME);
+        }
+        return blogLoginService.login(user);
+    }
+    @ApiOperation(&quot;退出登录&quot;)
+    @PostMapping(&quot;/logout&quot;)
+    public R logout() {
+        return blogLoginService.logout();
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public interface BlogLoginService {
+    R login(User user);
+
+    R logout();
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@Service
+public class BlogLoginServiceImpl implements BlogLoginService {
+    @Autowired
+    private AuthenticationManager authenticationManager;
+    @Autowired
+    private RedisCache redisCache;
+    @Override
+    public R login(User user) {
+    	//调用security验证
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
+        Authentication authenticate = authenticationManager.authenticate(authenticationToken);
+        //判断是否认证通过
+        if (Objects.isNull(authenticate)) {
+            throw new RuntimeException(&quot;用户名或密码错误&quot;);
+        }
+        //获取userId生成token
+        LoginUser loginUser = (LoginUser) authenticate.getPrincipal();
+        String userId = loginUser.getUser().getId().toString();
+        String jwt = JwtUtil.createJWT(userId);
+        //把用户信息存入redis
+        redisCache.setCacheObject(&quot;bloglogin:&quot; + userId, loginUser);
+        //把token和userInfo封装并返回
+        UserInfoVo userInfoVo = BeanCopyUtils.copyBean(loginUser.getUser(), UserInfoVo.class);
+        BlogUserLoginVo vo = new BlogUserLoginVo(jwt, userInfoVo);
+        return R.okResult(vo);
+    }
+
+    @Override
+    public R logout() {
+        //获取token 解析获取userid
+        LoginUser loginUser = (LoginUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        //获取userid
+        String userId = loginUser.getUser().getId().toString();
+        // 从redis中删除记录
+        redisCache.deleteObject(&quot;bloglogin:&quot; + userId);
+        // 响应
+        return R.okResult();
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>SecurityConfig配置
+放开登录接口
+.antMatchers(&quot;/login&quot;).anonymous()
+
+
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                //关闭csrf
+                .csrf().disable()
+                //不通过Session获取SecurityContext
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 对于登录接口 允许匿名访问
+                .antMatchers(&quot;/login&quot;).anonymous()
+                // 除上面外的所有请求全部不需要认证即可访问
+                .anyRequest().permitAll();
+
+
+        http.logout().disable();
+        //允许跨域
+        http.cors();
+    }
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+}
+</code></pre></div><h1 id="_4-jwt登录校验过滤器"><a href="#_4-jwt登录校验过滤器" class="header-anchor">#</a> 4.JWT登录校验过滤器</h1> <p>通过token来验证 是否认证</p> <p>步骤：</p> <ol><li>获取token</li> <li>解析token获取其中的userid</li> <li>从redis中获取用户信息</li> <li>存入SecurityContextHolder</li></ol> <div class="language- extra-class"><pre class="language-text"><code>@Component
+public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
+    @Autowired
+    private RedisCache redisCache;
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        // 从请求头上拿token
+        String token = request.getHeader(&quot;token&quot;);
+        if (!StringUtils.hasText(token)) {
+            // 没有token
+            // 说明这个接口不需要登录 直接放行
+            filterChain.doFilter(request, response);
+            return;
+        }
+        // 解析获取userId
+        Claims jwt = null;
+        try {
+            jwt = JwtUtil.parseJWT(token);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // token超时 token非法
+            // 响应给前端需要重新登录
+            R r = R.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+            WebUtils.renderString(response, JSON.toJSONString(r));
+            return;
+        }
+        String userId = jwt.getSubject();
+        // 根据userId去redis查信息
+        LoginUser loginUser = redisCache.getCacheObject(&quot;bloglogin:&quot; + userId);
+        // 如果获取不到
+        if (Objects.isNull(loginUser)) {
+            // 说明登录过期
+            R r = R.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+            WebUtils.renderString(response, JSON.toJSONString(r));
+            return;
+        }
+        // 存入SecurityContextHolder
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, null);
+        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+        filterChain.doFilter(request, response);
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>SecurityConfig配置
+
+//把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
+
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    @Autowired
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                //关闭csrf
+                .csrf().disable()
+                //不通过Session获取SecurityContext
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 对于登录接口 允许匿名访问
+                .antMatchers(&quot;/login&quot;).anonymous()
+                //jwt过滤器测试用，如果测试没有问题吧这里删除了
+                .antMatchers(&quot;/link/getAllLink&quot;).authenticated()
+                // 除上面外的所有请求全部不需要认证即可访问
+                .anyRequest().permitAll();
+
+
+        http.logout().disable();
+        //把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+        //允许跨域
+        http.cors();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+}
+</code></pre></div><h1 id="_5-认证授权失败处理"><a href="#_5-认证授权失败处理" class="header-anchor">#</a> 5.认证授权失败处理</h1> <div class="language- extra-class"><pre class="language-text"><code>@Component
+public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
+
+    @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+        authException.printStackTrace();
+        //InsufficientAuthenticationException
+        //BadCredentialsException
+        ResponseResult result = null;
+        if(authException instanceof BadCredentialsException){
+            result = ResponseResult.errorResult(AppHttpCodeEnum.LOGIN_ERROR.getCode(),authException.getMessage());
+        }else if(authException instanceof InsufficientAuthenticationException){
+            result = ResponseResult.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+        }else{
+            result = ResponseResult.errorResult(AppHttpCodeEnum.SYSTEM_ERROR.getCode(),&quot;认证或授权失败&quot;);
+        }
+        //响应给前端
+        WebUtils.renderString(response, JSON.toJSONString(result));
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@Component
+public class AccessDeniedHandlerImpl implements AccessDeniedHandler {
+    @Override
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
+        accessDeniedException.printStackTrace();
+        ResponseResult result = ResponseResult.errorResult(AppHttpCodeEnum.NO_OPERATOR_AUTH);
+        //响应给前端
+        WebUtils.renderString(response, JSON.toJSONString(result));
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>配置Security异常处理器
+
+
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    @Autowired
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+    @Autowired
+    AuthenticationEntryPoint authenticationEntryPoint;
+    @Autowired
+    AccessDeniedHandler accessDeniedHandler;
+
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                //关闭csrf
+                .csrf().disable()
+                //不通过Session获取SecurityContext
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 对于登录接口 允许匿名访问
+                .antMatchers(&quot;/login&quot;).anonymous()
+                //jwt过滤器测试用，如果测试没有问题吧这里删除了
+                .antMatchers(&quot;/link/getAllLink&quot;).authenticated()
+                // 除上面外的所有请求全部不需要认证即可访问
+                .anyRequest().permitAll();
+
+        //配置异常处理器
+        http.exceptionHandling()
+                .authenticationEntryPoint(authenticationEntryPoint)
+                .accessDeniedHandler(accessDeniedHandler);
+
+        http.logout().disable();
+        //把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+        //允许跨域
+        http.cors();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+}
+</code></pre></div><h1 id="_6-统一异常处理"><a href="#_6-统一异常处理" class="header-anchor">#</a> 6.统一异常处理</h1> <p>处理非法情况</p> <p>比如 前端传的用户名非空</p> <div class="language- extra-class"><pre class="language-text"><code>SystemException
+
+public class SystemException extends RuntimeException{
+
+    private int code;
+
+    private String msg;
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public SystemException(AppHttpCodeEnum httpCodeEnum) {
+        super(httpCodeEnum.getMsg());
+        this.code = httpCodeEnum.getCode();
+        this.msg = httpCodeEnum.getMsg();
+    }
+    
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>GlobalExceptionHandler
+
+@RestControllerAdvice
+@Slf4j
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(SystemException.class)
+    public ResponseResult systemExceptionHandler(SystemException e){
+        //打印异常信息
+        log.error(&quot;出现了异常！ {}&quot;,e);
+        //从异常对象中获取提示信息封装返回
+        return ResponseResult.errorResult(e.getCode(),e.getMsg());
+    }
+
+
+    @ExceptionHandler(Exception.class)
+    public ResponseResult exceptionHandler(Exception e){
+        //打印异常信息
+        log.error(&quot;出现了异常！ {}&quot;,e);
+        //从异常对象中获取提示信息封装返回
+        return ResponseResult.errorResult(AppHttpCodeEnum.SYSTEM_ERROR.getCode(),e.getMessage());
+    }
+}
+</code></pre></div><h1 id="_7-退出登录接口"><a href="#_7-退出登录接口" class="header-anchor">#</a> 7.退出登录接口</h1> <p>步骤：</p> <ol><li>获取token 解析获取userid</li> <li>删除redis中的用户信息</li> <li>响应</li></ol> <div class="language- extra-class"><pre class="language-text"><code>SecurityConfig 
+要关闭默认的退出登录功能。并且要配置我们的退出登录接口需要认证才能访问
+
+//注销接口需要认证才能访问
+.antMatchers(&quot;/logout&quot;).authenticated()
+
+//关闭默认的注销接口
+http.logout().disable();
+</code></pre></div><h1 id="_8-权限控制"><a href="#_8-权限控制" class="header-anchor">#</a> 8.权限控制</h1> <div class="language- extra-class"><pre class="language-text"><code>// 这里采用自定义权限校验方法
+SecurityConfig中
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+
+写一个类
+//自定义权限校验方法
+@Service(&quot;ps&quot;)
+public class PermissionService {
+
+    @Autowired
+    private MenuService menuService;
+
+    /**
+     * 判断当前用户是否具有权限
+     * @param permission
+     * @return
+     */
+    public boolean hasPermission(String permission) {
+        // 获取当前用户的权限列表
+        // 如果是admin
+        if (SecurityUtils.isAdmin()) {
+            return true;
+        }
+        List&lt;String&gt; perms = menuService.selectPermsByUserId(SecurityUtils.getUserId());
+        return perms.contains(permission);
+    }
+}
+
+在接口上 添加注解
+    @PreAuthorize(&quot;@ps.hasPermission('321:1231:123')&quot;)
+    @GetMapping(&quot;/list&quot;)
+    public R&lt;PageVo&gt; list(Integer pageNum, Integer pageSize, TagListDto tagListDto) {
+        return tagService.pageTagList(pageNum, pageSize, tagListDto);
+    }
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.dd397728.js" defer></script><script src="/assets/js/2.6430ac10.js" defer></script><script src="/assets/js/24.8f60b85b.js" defer></script>
+  </body>
+</html>

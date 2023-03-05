@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.搭建模块化项目 | 慢下来~享受当下~</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="网站关键词">
+    <meta name="author" content="zch1337">
+    
+    <link rel="preload" href="/assets/css/0.styles.7b36eabc.css" as="style"><link rel="preload" href="/assets/js/app.dd397728.js" as="script"><link rel="preload" href="/assets/js/2.6430ac10.js" as="script"><link rel="preload" href="/assets/js/28.96e30dd4.js" as="script"><link rel="prefetch" href="/assets/js/10.de11ce4e.js"><link rel="prefetch" href="/assets/js/11.eb24f3d9.js"><link rel="prefetch" href="/assets/js/12.58efe507.js"><link rel="prefetch" href="/assets/js/13.3d3cb395.js"><link rel="prefetch" href="/assets/js/14.163292db.js"><link rel="prefetch" href="/assets/js/15.0eeb79e2.js"><link rel="prefetch" href="/assets/js/16.0fd3ccda.js"><link rel="prefetch" href="/assets/js/17.a13c3e02.js"><link rel="prefetch" href="/assets/js/18.e19d705d.js"><link rel="prefetch" href="/assets/js/19.52c11801.js"><link rel="prefetch" href="/assets/js/20.4cfdf5ad.js"><link rel="prefetch" href="/assets/js/21.b6ab34b9.js"><link rel="prefetch" href="/assets/js/22.d6b62e7e.js"><link rel="prefetch" href="/assets/js/23.5bfd3dd2.js"><link rel="prefetch" href="/assets/js/24.8f60b85b.js"><link rel="prefetch" href="/assets/js/25.23e92ce8.js"><link rel="prefetch" href="/assets/js/26.079d4c49.js"><link rel="prefetch" href="/assets/js/27.2a42a3bc.js"><link rel="prefetch" href="/assets/js/29.92dc21e8.js"><link rel="prefetch" href="/assets/js/3.7ceae309.js"><link rel="prefetch" href="/assets/js/30.a44ddd87.js"><link rel="prefetch" href="/assets/js/31.ebffffad.js"><link rel="prefetch" href="/assets/js/32.cbeff704.js"><link rel="prefetch" href="/assets/js/33.f34223b0.js"><link rel="prefetch" href="/assets/js/4.3357b40a.js"><link rel="prefetch" href="/assets/js/5.1d0c2d3a.js"><link rel="prefetch" href="/assets/js/6.aeb7dc84.js"><link rel="prefetch" href="/assets/js/7.f2b24add.js"><link rel="prefetch" href="/assets/js/8.b624c3e8.js"><link rel="prefetch" href="/assets/js/9.4891ca45.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7b36eabc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/hero.png" alt="慢下来~享受当下~" class="logo"> <span class="site-name can-hide">慢下来~享受当下~</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="英语" class="dropdown-title"><span class="title">英语</span> <span class="arrow down"></span></button> <button type="button" aria-label="英语" class="mobile-dropdown-title"><span class="title">英语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yingyu/fangfa.html" class="nav-link">
+  方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/sanjianke.html" class="nav-link">
+  三剑客
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/vue.html" class="nav-link">
+  vue全家桶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          第一阶段-基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/javase.html" class="nav-link">
+  javase
+</a></li><li class="dropdown-subitem"><a href="/houduan/mysql.html" class="nav-link">
+  mysql
+</a></li><li class="dropdown-subitem"><a href="/houduan/jdbc.html" class="nav-link">
+  jdbc
+</a></li><li class="dropdown-subitem"><a href="/houduan/servlet.html" class="nav-link">
+  servlet
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第二阶段-框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/maven.html" class="nav-link">
+  maven
+</a></li><li class="dropdown-subitem"><a href="/houduan/spring.html" class="nav-link">
+  spring
+</a></li><li class="dropdown-subitem"><a href="/houduan/springMVC.html" class="nav-link">
+  springMVC
+</a></li><li class="dropdown-subitem"><a href="/houduan/mybatis+PLUS.html" class="nav-link">
+  mybatis+PLUS
+</a></li><li class="dropdown-subitem"><a href="/houduan/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-subitem"><a href="/houduan/redis.html" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/houduan/springsecurity.html" class="nav-link">
+  springsecurity
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第三阶段-微服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/springcloud.html" class="nav-link">
+  springcloud
+</a></li><li class="dropdown-subitem"><a href="/houduan/springcloudAlibaba.html" class="nav-link">
+  springcloudAlibaba
+</a></li><li class="dropdown-subitem"><a href="/houduan/rabbitMQ.html" class="nav-link">
+  rabbitMQ
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/linux.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/nginx.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/docker.html" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高效工具" class="dropdown-title"><span class="title">高效工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="高效工具" class="mobile-dropdown-title"><span class="title">高效工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/gaoxiao/vim.html" class="nav-link">
+  vim
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目总结" class="dropdown-title"><span class="title">项目总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目总结" class="mobile-dropdown-title"><span class="title">项目总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/prosummary/vueS.html" class="nav-link">
+  vue项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/javaS.html" class="nav-link">
+  java项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/前后端项目开发流程.html" class="nav-link">
+  前后端项目搭建
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/后端知识总结.html" class="nav-link">
+  后端开发流程
+</a></li></ul></div></div><div class="nav-item"><a href="http://www.zch1337.xyz/#/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于我
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="英语" class="dropdown-title"><span class="title">英语</span> <span class="arrow down"></span></button> <button type="button" aria-label="英语" class="mobile-dropdown-title"><span class="title">英语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yingyu/fangfa.html" class="nav-link">
+  方法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/sanjianke.html" class="nav-link">
+  三剑客
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/vue.html" class="nav-link">
+  vue全家桶
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          第一阶段-基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/javase.html" class="nav-link">
+  javase
+</a></li><li class="dropdown-subitem"><a href="/houduan/mysql.html" class="nav-link">
+  mysql
+</a></li><li class="dropdown-subitem"><a href="/houduan/jdbc.html" class="nav-link">
+  jdbc
+</a></li><li class="dropdown-subitem"><a href="/houduan/servlet.html" class="nav-link">
+  servlet
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第二阶段-框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/maven.html" class="nav-link">
+  maven
+</a></li><li class="dropdown-subitem"><a href="/houduan/spring.html" class="nav-link">
+  spring
+</a></li><li class="dropdown-subitem"><a href="/houduan/springMVC.html" class="nav-link">
+  springMVC
+</a></li><li class="dropdown-subitem"><a href="/houduan/mybatis+PLUS.html" class="nav-link">
+  mybatis+PLUS
+</a></li><li class="dropdown-subitem"><a href="/houduan/springboot.html" class="nav-link">
+  springboot
+</a></li><li class="dropdown-subitem"><a href="/houduan/redis.html" class="nav-link">
+  redis
+</a></li><li class="dropdown-subitem"><a href="/houduan/springsecurity.html" class="nav-link">
+  springsecurity
+</a></li></ul></li><li class="dropdown-item"><h4>
+          第三阶段-微服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/houduan/springcloud.html" class="nav-link">
+  springcloud
+</a></li><li class="dropdown-subitem"><a href="/houduan/springcloudAlibaba.html" class="nav-link">
+  springcloudAlibaba
+</a></li><li class="dropdown-subitem"><a href="/houduan/rabbitMQ.html" class="nav-link">
+  rabbitMQ
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yunwei/linux.html" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/nginx.html" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/yunwei/docker.html" class="nav-link">
+  docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高效工具" class="dropdown-title"><span class="title">高效工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="高效工具" class="mobile-dropdown-title"><span class="title">高效工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/gaoxiao/vim.html" class="nav-link">
+  vim
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="项目总结" class="dropdown-title"><span class="title">项目总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="项目总结" class="mobile-dropdown-title"><span class="title">项目总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/prosummary/vueS.html" class="nav-link">
+  vue项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/javaS.html" class="nav-link">
+  java项目
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/前后端项目开发流程.html" class="nav-link">
+  前后端项目搭建
+</a></li><li class="dropdown-item"><!----> <a href="/prosummary/后端知识总结.html" class="nav-link">
+  后端开发流程
+</a></li></ul></div></div><div class="nav-item"><a href="http://www.zch1337.xyz/#/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于我
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>1.搭建模块化项目</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_1-搭建模块化项目" class="sidebar-link">1.搭建模块化项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_1-建一个空的父项目" class="sidebar-link">1.建一个空的父项目</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_2-新建子模块" class="sidebar-link">2.新建子模块</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_3-配置pom" class="sidebar-link">3.配置pom</a></li></ul></li><li><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_2-springboot和mybatispuls整合配置测试" class="sidebar-link">2.SpringBoot和MybatisPuls整合配置测试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#配置yml文件" class="sidebar-link">配置yml文件</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#配置启动类" class="sidebar-link">配置启动类</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#使用easycode" class="sidebar-link">使用easycode</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#编写测试接口" class="sidebar-link">编写测试接口</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#测试成功" class="sidebar-link">测试成功</a></li></ul></li><li><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_3-根据id查询权限-角色" class="sidebar-link">3.根据id查询权限/角色</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_4-swagger2" class="sidebar-link">4.Swagger2</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#依赖" class="sidebar-link">依赖</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#启用swagger2" class="sidebar-link">启用Swagger2</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#配置类和接口" class="sidebar-link">配置类和接口</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#测试" class="sidebar-link">测试</a></li></ul></li><li><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_5-springcurity登录登出" class="sidebar-link">5.springcurity登录登出</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#前提" class="sidebar-link">前提</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_1-userdetailserviceimpl" class="sidebar-link">1.UserDetailServiceImpl</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_2-登录" class="sidebar-link">2.登录</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_3-token校验" class="sidebar-link">3.token校验</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_4-认证授权失败处理" class="sidebar-link">4.认证授权失败处理</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_5-权限控制" class="sidebar-link">5.权限控制</a></li><li class="sidebar-sub-header"><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_6-登出" class="sidebar-link">6.登出</a></li></ul></li><li><a href="/prosummary/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html#_6-完善其他功能" class="sidebar-link">6.完善其他功能</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-搭建模块化项目"><a href="#_1-搭建模块化项目" class="header-anchor">#</a> 1.搭建模块化项目</h2> <h3 id="_1-建一个空的父项目"><a href="#_1-建一个空的父项目" class="header-anchor">#</a> 1.建一个空的父项目</h3> <h3 id="_2-新建子模块"><a href="#_2-新建子模块" class="header-anchor">#</a> 2.新建子模块</h3> <p><img src="https://raw.githubusercontent.com/zhuchenghao1337/github-images/main/2022/20230114172606.png" alt=""></p> <h3 id="_3-配置pom"><a href="#_3-配置pom" class="header-anchor">#</a> 3.配置pom</h3> <h4 id="父模块"><a href="#父模块" class="header-anchor">#</a> 父模块</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;xyz.zch1337&lt;/groupId&gt;
+    &lt;artifactId&gt;zch-project&lt;/artifactId&gt;
+    &lt;packaging&gt;pom&lt;/packaging&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;modules&gt;
+        &lt;module&gt;zch-framework&lt;/module&gt;
+        &lt;module&gt;zch-admin&lt;/module&gt;
+    &lt;/modules&gt;
+
+    &lt;properties&gt;
+        &lt;maven.compiler.source&gt;8&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;8&lt;/maven.compiler.target&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+    &lt;!--进行版本控制--&gt;
+    &lt;dependencyManagement&gt;
+        &lt;dependencies&gt;
+            &lt;!-- SpringBoot的依赖配置--&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;
+                &lt;version&gt;2.5.0&lt;/version&gt;
+                &lt;type&gt;pom&lt;/type&gt;
+                &lt;scope&gt;import&lt;/scope&gt;
+            &lt;/dependency&gt;
+            &lt;!--fastjson依赖--&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+                &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+                &lt;version&gt;1.2.33&lt;/version&gt;
+            &lt;/dependency&gt;
+            &lt;!--jwt依赖--&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
+                &lt;artifactId&gt;jjwt&lt;/artifactId&gt;
+                &lt;version&gt;0.9.0&lt;/version&gt;
+            &lt;/dependency&gt;
+            &lt;!--mybatisPlus依赖--&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+                &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+                &lt;version&gt;3.4.3&lt;/version&gt;
+            &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+    &lt;/dependencyManagement&gt;
+    &lt;!--打包配置--&gt;
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.1&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;source&gt;${java.version}&lt;/source&gt;
+                    &lt;target&gt;${java.version}&lt;/target&gt;
+                    &lt;encoding&gt;${project.build.sourceEncoding}&lt;/encoding&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre></div><h4 id="zch-framework"><a href="#zch-framework" class="header-anchor">#</a> zch-framework</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;zch-project&lt;/artifactId&gt;
+        &lt;groupId&gt;xyz.zch1337&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;artifactId&gt;zch-framework&lt;/artifactId&gt;
+
+    &lt;properties&gt;
+        &lt;maven.compiler.source&gt;8&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;8&lt;/maven.compiler.target&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--lombk--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+        &lt;!--junit--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;!--            &lt;scope&gt;test&lt;/scope&gt;--&gt;
+        &lt;/dependency&gt;
+        &lt;!--SpringSecurity启动器--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--redis依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--fastjson依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+            &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--jwt依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
+            &lt;artifactId&gt;jjwt&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--mybatisPlus依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--mysql数据库驱动--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;!--AOP--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre></div><h4 id="zch-admin"><a href="#zch-admin" class="header-anchor">#</a> zch-admin</h4> <div class="language- extra-class"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;zch-project&lt;/artifactId&gt;
+        &lt;groupId&gt;xyz.zch1337&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;artifactId&gt;zch-admin&lt;/artifactId&gt;
+
+    &lt;dependencies&gt;
+    &lt;!--引入共用模块--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;xyz.zch1337&lt;/groupId&gt;
+            &lt;artifactId&gt;zch-framework&lt;/artifactId&gt;
+            &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;
+</code></pre></div><h2 id="_2-springboot和mybatispuls整合配置测试"><a href="#_2-springboot和mybatispuls整合配置测试" class="header-anchor">#</a> 2.SpringBoot和MybatisPuls整合配置测试</h2> <h3 id="配置yml文件"><a href="#配置yml文件" class="header-anchor">#</a> 配置yml文件</h3> <div class="language- extra-class"><pre class="language-text"><code>server:
+  port: 7777
+spring:
+  datasource:
+    url: jdbc:mysql://124.222.237.176:22135/ruoyi?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=true&amp;serverTimezone=GMT%2B8
+    username: root
+    password: zhuchenghao123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+</code></pre></div><h3 id="配置启动类"><a href="#配置启动类" class="header-anchor">#</a> 配置启动类</h3> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+@MapperScan(&quot;xyz.zch1337.mapper&quot;) // mybatis包扫描
+public class ZCHAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ZCHAdminApplication.class, args);
+    }
+}
+</code></pre></div><h3 id="使用easycode"><a href="#使用easycode" class="header-anchor">#</a> 使用easycode</h3> <p><img src="https://raw.githubusercontent.com/zhuchenghao1337/github-images/main/2022/20230114200104.png" alt=""></p> <h3 id="编写测试接口"><a href="#编写测试接口" class="header-anchor">#</a> 编写测试接口</h3> <div class="language- extra-class"><pre class="language-text"><code>package xyz.zch1337.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import xyz.zch1337.entity.User;
+import xyz.zch1337.service.UserService;
+
+import java.util.List;
+
+@RestController
+public class TestController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping(&quot;/test&quot;)
+    public String test(){
+        List&lt;User&gt; list = userService.list();
+        System.out.println(list);
+        return &quot;123&quot;;
+    }
+}
+</code></pre></div><h3 id="测试成功"><a href="#测试成功" class="header-anchor">#</a> 测试成功</h3> <h2 id="_3-根据id查询权限-角色"><a href="#_3-根据id查询权限-角色" class="header-anchor">#</a> 3.根据id查询权限/角色</h2> <p>RoleMapper</p> <div class="language- extra-class"><pre class="language-text"><code>public interface RoleMapper extends BaseMapper&lt;Role&gt; {
+    /***
+     * 根据用户id查询Roles
+     * @param userId
+     * @return
+     */
+    List&lt;String&gt; selectRolesByUserId(Long userId);
+
+}
+</code></pre></div><p>xml</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot; &gt;
+&lt;mapper namespace=&quot;xyz.zch1337.mapper.RoleMapper&quot;&gt;
+    &lt;select id=&quot;selectRolesByUserId&quot; resultType=&quot;java.lang.String&quot;&gt;
+        SELECT role_key
+        from sys_role
+        where role_id in (SELECT role_id
+            from sys_user_role
+            where user_id = #{userId})
+            and status = 0
+            and del_flag = 0
+    &lt;/select&gt;
+&lt;/mapper&gt;
+</code></pre></div><h2 id="_4-swagger2"><a href="#_4-swagger2" class="header-anchor">#</a> 4.Swagger2</h2> <h3 id="依赖"><a href="#依赖" class="header-anchor">#</a> 依赖</h3> <div class="language- extra-class"><pre class="language-text"><code>        &lt;dependency&gt;
+            &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+            &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+            &lt;version&gt;2.9.2&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+            &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+            &lt;version&gt;2.9.2&lt;/version&gt;
+        &lt;/dependency&gt;xxxxxxxxxx &lt;dependency&gt;    &lt;groupId&gt;com.github.xiaoymin&lt;/groupId&gt;    &lt;artifactId&gt;knife4j-spring-boot-starter&lt;/artifactId&gt;&lt;/dependency&gt;        &lt;dependency&gt;            &lt;groupId&gt;io.springfox&lt;/groupId&gt;            &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;            &lt;version&gt;2.9.2&lt;/version&gt;        &lt;/dependency&gt;        &lt;dependency&gt;            &lt;groupId&gt;io.springfox&lt;/groupId&gt;            &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;            &lt;version&gt;2.9.2&lt;/version&gt;        &lt;/dependency&gt;
+</code></pre></div><h3 id="启用swagger2"><a href="#启用swagger2" class="header-anchor">#</a> 启用Swagger2</h3> <p>在启动类上或者配置类加 @EnableSwagger2 注解</p> <div class="language- extra-class"><pre class="language-text"><code>@SpringBootApplication
+@MapperScan(&quot;xyz.zch1337.mapper&quot;) // mybatis包扫描
+@EnableSwagger2
+public class ZCHAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ZCHAdminApplication.class, args);
+    }
+}
+</code></pre></div><h3 id="配置类和接口"><a href="#配置类和接口" class="header-anchor">#</a> 配置类和接口</h3> <div class="language- extra-class"><pre class="language-text"><code>@Api(tags = &quot;评论&quot;,description = &quot;评论相关接口&quot;)
+@ApiOperation(value = &quot;友链评论列表&quot;,notes = &quot;获取一页友链评论&quot;)
+</code></pre></div><h3 id="测试"><a href="#测试" class="header-anchor">#</a> 测试</h3> <div class="language- extra-class"><pre class="language-text"><code>http://localhost:7777/swagger-ui.html
+</code></pre></div><h2 id="_5-springcurity登录登出"><a href="#_5-springcurity登录登出" class="header-anchor">#</a> 5.springcurity登录登出</h2> <h3 id="前提"><a href="#前提" class="header-anchor">#</a> 前提</h3> <p>1.根据userName查询用户</p> <p>2.根据用户id查询权限</p> <h3 id="_1-userdetailserviceimpl"><a href="#_1-userdetailserviceimpl" class="header-anchor">#</a> 1.UserDetailServiceImpl</h3> <div class="language- extra-class"><pre class="language-text"><code>@Service
+public class UserDetailServiceImpl implements UserDetailsService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
+
+    @Override
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        // 根据userName查数据
+        LambdaQueryWrapper&lt;User&gt; queryWrapper = new LambdaQueryWrapper&lt;User&gt;();
+        queryWrapper.eq(User::getUserName, userName);
+        User user = userMapper.selectOne(queryWrapper);
+        if(Objects.isNull(user)){
+            // 异常
+            throw new RuntimeException(&quot;用户不存在&quot;);
+        }
+        // 根据用户id查询权限
+        List&lt;String&gt; roles = roleMapper.selectRolesByUserId(user.getUserId());
+        return new LoginUser(user, roles);
+    }
+}
+</code></pre></div><p>LoginUser</p> <div class="language- extra-class"><pre class="language-text"><code>@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoginUser implements UserDetails {
+
+    private User user;
+
+    // 这里采用自定义权限校验方法
+    private List&lt;String&gt; authorityList;
+
+    @Override
+    public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
+        return null;
+    }
+
+    @Override
+    public String getPassword() {
+        return user.getPassword();
+    }
+
+    @Override
+    public String getUsername() {
+        return user.getUserName();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}
+</code></pre></div><h3 id="_2-登录"><a href="#_2-登录" class="header-anchor">#</a> 2.登录</h3> <div class="language- extra-class"><pre class="language-text"><code>@RestController
+@Api(tags = &quot;登录登出接口&quot;)
+public class LoginController {
+
+    @Autowired
+    private LoginService loginService;
+
+    @PostMapping(&quot;/login&quot;)
+    @ApiOperation(value = &quot;登录&quot;)
+    public R login(@RequestBody UserDto userDto){
+        return loginService.login(userDto);
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public interface LoginService {
+    /**
+     * 登录接口
+     * @param userDto
+     * @return
+     */
+    R login(UserDto userDto);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@Service
+public class LoginServiceImpl implements LoginService {
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Override
+    public R login(UserDto userDto) {
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDto.getUserName(),userDto.getPassword());
+        Authentication authenticate = authenticationManager.authenticate(authenticationToken);
+        if(Objects.isNull(authenticate)){
+            throw new RuntimeException(&quot;密码错误&quot;);
+        }
+        // 根据id生成jwt并存入redis
+        LoginUser loginUser = (LoginUser) authenticate.getPrincipal();
+        String userId = loginUser.getUser().getUserId().toString();
+        String token = JwtUtil.createJWT(userId);
+        redisCache.setCacheObject(&quot;login:&quot;+userId, loginUser);
+        // 响应
+        LoginVo loginVo = new LoginVo();
+        loginVo.setToken(token);
+        return R.okResult(loginVo);
+    }
+}
+</code></pre></div><h3 id="_3-token校验"><a href="#_3-token校验" class="header-anchor">#</a> 3.token校验</h3> <div class="language- extra-class"><pre class="language-text"><code>@Component
+public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
+    @Autowired
+    private RedisCache redisCache;
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        // 从请求头上拿token
+        String token = request.getHeader(&quot;token&quot;);
+        if (!StringUtils.hasText(token)) {
+            // 没有token
+            // 说明这个接口不需要登录 直接放行
+            filterChain.doFilter(request, response);
+            return;
+        }
+        // 解析获取userId
+        Claims jwt = null;
+        try {
+            jwt = JwtUtil.parseJWT(token);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // token超时 token非法
+            // 响应给前端需要重新登录
+            R r = R.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+            WebUtils.renderString(response, JSON.toJSONString(r));
+            return;
+        }
+        String userId = jwt.getSubject();
+        // 根据userId去redis查信息
+        LoginUser loginUser = redisCache.getCacheObject(&quot;login:&quot; + userId);
+        // 如果获取不到
+        if (Objects.isNull(loginUser)) {
+            // 说明登录过期
+            R r = R.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+            WebUtils.renderString(response, JSON.toJSONString(r));
+            return;
+        }
+        // 存入SecurityContextHolder
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, null);
+        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+        filterChain.doFilter(request, response);
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>        @Autowired
+        private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+        
+        //把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Autowired
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                //关闭csrf
+                .csrf().disable()
+                //不通过Session获取SecurityContext
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 对于登录接口 允许匿名访问
+                .antMatchers(&quot;/login&quot;).anonymous()
+                .antMatchers(&quot;/test&quot;).authenticated()
+                // 除上面外的所有请求全部不需要认证即可访问
+                .anyRequest().permitAll();
+
+
+        http.logout().disable();
+        //把jwtAuthenticationTokenFilter添加到SpringSecurity的过滤器链中
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+        //允许跨域
+
+        http.cors();
+    }
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+}
+</code></pre></div><h3 id="_4-认证授权失败处理"><a href="#_4-认证授权失败处理" class="header-anchor">#</a> 4.认证授权失败处理</h3> <p>​	AuthenticationEntryPoint 认证失败处理器</p> <p>​	AccessDeniedHandler 授权失败处理器</p> <div class="language- extra-class"><pre class="language-text"><code>@Component
+public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
+
+    @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+        authException.printStackTrace();
+        //InsufficientAuthenticationException
+        //BadCredentialsException
+        R result = null;
+        if(authException instanceof BadCredentialsException){
+            result = R.errorResult(AppHttpCodeEnum.LOGIN_ERROR.getCode(),authException.getMessage());
+        }else if(authException instanceof InsufficientAuthenticationException){
+            result = R.errorResult(AppHttpCodeEnum.NEED_LOGIN);
+        }else{
+            result = R.errorResult(AppHttpCodeEnum.SYSTEM_ERROR.getCode(),&quot;认证或授权失败&quot;);
+        }
+        //响应给前端
+        WebUtils.renderString(response, JSON.toJSONString(result));
+    }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>@Component
+public class AccessDeniedHandlerImpl implements AccessDeniedHandler {
+    @Override
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e) throws IOException, ServletException {
+        e.printStackTrace();
+        R r = R.errorResult(AppHttpCodeEnum.NO_OPERATOR_AUTH);
+        WebUtils.renderString(response, JSON.toJSONString(r));
+    }
+}
+</code></pre></div><p>配置Security异常处理器</p> <div class="language- extra-class"><pre class="language-text"><code>    @Autowired
+    private AuthenticationEntryPoint authenticationEntryPoint;
+
+    @Autowired
+    private AccessDeniedHandler accessDeniedHandler;
+    
+    
+        //配置异常处理器
+        http.exceptionHandling()
+                .authenticationEntryPoint(authenticationEntryPoint)
+                .accessDeniedHandler(accessDeniedHandler);    
+    
+</code></pre></div><h3 id="_5-权限控制"><a href="#_5-权限控制" class="header-anchor">#</a> 5.权限控制</h3> <div class="language- extra-class"><pre class="language-text"><code>//自定义权限校验方法
+@Service(&quot;ps&quot;)
+public class PermissionService {
+
+    @Autowired
+    private RoleMapper roleMapper;
+
+    /**
+     * 判断当前用户是否具有权限
+     * @param permission
+     * @return
+     */
+    public boolean hasPermission(String permission) {
+        // 获取当前用户的权限列表
+        List&lt;String&gt; perms = roleMapper.selectRolesByUserId(SecurityUtils.getUserId());
+        return perms.contains(permission);
+    }
+}
+</code></pre></div><p>SecurityConfig</p> <div class="language- extra-class"><pre class="language-text"><code>@EnableGlobalMethodSecurity(prePostEnabled = true)
+</code></pre></div><p>注解</p> <div class="language- extra-class"><pre class="language-text"><code>    @GetMapping(&quot;/test&quot;)
+    @ApiOperation(value = &quot;测试1&quot;)
+    @PreAuthorize(&quot;@ps.hasPermission('admin')&quot;) ////////////
+    public String test(){
+        LambdaQueryWrapper&lt;User&gt; queryWrapper = new LambdaQueryWrapper&lt;&gt;();
+        queryWrapper.eq(User::getUserName, &quot;ry&quot;);
+        User user = userMapper.selectOne(queryWrapper);
+        System.out.println(user);
+//        List&lt;String&gt; keys = roleMapper.selectRolesByUserId(1L);
+//        System.out.println(keys);
+        return &quot;123&quot;;
+    }
+</code></pre></div><h3 id="_6-登出"><a href="#_6-登出" class="header-anchor">#</a> 6.登出</h3> <div class="language- extra-class"><pre class="language-text"><code>    @Override
+    public R logout() {
+        // 清除redis
+        Long userId = SecurityUtils.getUserId();
+        redisCache.deleteObject(&quot;login:&quot;+userId);
+        return R.okResult();
+    }
+</code></pre></div><p>SecurityConfig</p> <p>要关闭默认的退出登录功能。并且要配置我们的退出登录接口需要认证才能访问</p> <div class="language- extra-class"><pre class="language-text"><code>        //关闭默认的注销功能
+        http.logout().disable();
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>      .antMatchers(&quot;/logout&quot;).authenticated() //退出需要先登录
+</code></pre></div><h2 id="_6-完善其他功能"><a href="#_6-完善其他功能" class="header-anchor">#</a> 6.完善其他功能</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.dd397728.js" defer></script><script src="/assets/js/2.6430ac10.js" defer></script><script src="/assets/js/28.96e30dd4.js" defer></script>
+  </body>
+</html>
